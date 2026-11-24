@@ -118,10 +118,19 @@ notebooks/
   06b_qwen35_px1536_infer.ipynb  06의 LoRA로 고해상도(약 1,536토큰) 추론
   07_gemma4_31b_qlora.ipynb      Gemma 4 31B 4bit QLoRA
   04_final_ensemble.ipynb        확률 CSV → 그룹 평균 → 제출 파일 (CPU)
+experiments/                     최종 파이프라인 밖에서 시도한 실험 (출력 제거)
+  00_data_analysis.ipynb                     데이터 탐색 (크기·컬럼·정답 분포)
+  EXP-101_selective_reinfer_perm_crop.ipynb  저신뢰 78문항만 선지 순열 × 멀티크롭으로 재추론
+  EXP-105_internvl3_8b_lora.ipynb            다른 계열(InternVL3-8B) LoRA로 다양성 확보 시도
+  EXP-112_submission_candidates.ipynb        미리 정한 후보(단독·다수결·동일 평균)만 만들어 제출 비교
+  EXP-126_temperature_calibration.ipynb      모델별 온도 보정 후 로그 평균
+  EXP-128_gemma4_shift_tta.ipynb             Gemma QLoRA 선지 순서 이동 TTA
 docs/
   solution_description.pdf       솔루션 설명서 (5쪽)
   presentation.pdf               발표 자료 (15쪽)
 ```
+
+`experiments/`의 노트북은 대부분 **채택되지 않은 시도**입니다. 결과는 위 「효과가 없었던 시도」 표에 정리했고, 원본 실험 경로(`experiment_data/`)의 확률 파일을 읽기 때문에 그대로 다시 실행되지는 않습니다. 어떤 가설로 무엇을 시도했는지 보여 주려고 함께 올렸습니다.
 
 ## 실행 방법
 
