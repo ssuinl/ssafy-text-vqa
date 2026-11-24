@@ -1,0 +1,9 @@
+# data & outputs (not redistributable / large)
+*.zip
+*.csv
+repro/
+submissions/
+checkpoints/
+step_*/
+.ipynb_checkpoints/
+__pycache__/
